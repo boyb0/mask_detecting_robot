@@ -1,0 +1,10 @@
+<launch>
+    <node pkg="rosaria" type="RosAria" name="RosAria" />
+    <node pkg="my_project" type="camera_node.py" name="camera_node" />
+    <node pkg="my_project" type="video_display_node.py" name="video_display_node" />
+    <node pkg="my_project" type="video_processing_node.py" name="video_processing_node" />
+    <node pkg="my_project" type="sensors_node.py" name="sensors_node" />
+    <node pkg="my_project" type="actuators_node.py" name="actuators_node" />
+    <node pkg="my_project" type="main_node.py" name="main_node" output="screen" />
+    <node pkg="my_project" type="message_sending_node.py" name="message_sending_node" output="screen" />
+</launch>

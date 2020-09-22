@@ -88,14 +88,14 @@
 
 2. Клонирајте го проектот во *src* директориумот од вашата работна околина:
 
-	```
+```
 cd ~/catkin_ws/src
 git clone https://github.com/boyb0/mask_detecting_robot.git
 ```
 
 3. Клонирајте го [ROSARIA](http://wiki.ros.org/ROSARIA) пакетот во *src* директориумот од вашата ROS работна околина:
 
-	```
+```
 cd ~/catkin_ws/src
 git clone https://github.com/amor-ros-pkg/rosaria.git
 ```
@@ -104,7 +104,7 @@ git clone https://github.com/amor-ros-pkg/rosaria.git
 
 5. Искомпајлирајте ги проектите:
 
-	```
+```
 cd ~/catkin_ws
 catkin_make
 ```
@@ -117,19 +117,19 @@ catkin_make
 
 8. Подесете ги патеките до FaceDetectionModel и MaskDetectionModel. Промената треба да се изврши во скриптата *video_processing_node.py* која се наоѓа во *src* директориумот на проектот, на линија 30 и 33.
 
-	**ЗАБЕЛЕШКА:** FaceDecetionModel детекторот е зачуван во *model* директориумот на проектот, додека пак MaskDetectionModel е зачуван во домашниот директориум на проектот под името MaskDetectionModel.model. Потребно е да се обезбедат АПСОЛУТНИ ПАТЕКИ за двата детектори да можат да бидат точно вчитани. Исто така MaskDetectionModel е креиран користејќи Tensorflow 2.1.0, па доколку во работната околина е инсталирана друга верзија на овој модул може да настане проблем.
+**ЗАБЕЛЕШКА:** FaceDecetionModel детекторот е зачуван во *model* директориумот на проектот, додека пак MaskDetectionModel е зачуван во домашниот директориум на проектот под името MaskDetectionModel.model. Потребно е да се обезбедат АПСОЛУТНИ ПАТЕКИ за двата детектори да можат да бидат точно вчитани. Исто така MaskDetectionModel е креиран користејќи Tensorflow 2.1.0, па доколку во работната околина е инсталирана друга верзија на овој модул може да настане проблем.
 
 9. Вклучете го роботот и поврзете се со него преку сериска врска. 
 
 10. Доколку не ви е автоматски подесено, source-нете ја catkin setup скриптата во работниот простор:
-	```
+```
 cd ~/catkin_ws
 . devel/setup.bash
 ```
 
 11. Стартувајте ги јазлите:
 
-	```
+```
 sudo chmod 777 -R /dev/ttyUSB0
 roslaunch mask_detecting_robot system.launch
 ```
